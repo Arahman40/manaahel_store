@@ -1,0 +1,515 @@
+{
+  "name": "manaahel-theme",
+  "version": "1.0.0",
+  "author": "Abo Zyad",
+  "description": "Premium Islamic Charity Theme - Built for Manaahel",
+  "license": "MIT",
+  "rtl": true,
+  "settings": {
+    "primary_color": {
+      "type": "color",
+      "label": "Primary Color",
+      "default": "#0d7377"
+    },
+    "accent_color": {
+      "type": "color",
+      "label": "Accent Color (Gold)",
+      "default": "#c9a227"
+    },
+    "font_family": {
+      "type": "select",
+      "label": "Font Family",
+      "options": [
+        { "value": "Noto Sans Arabic", "label": "Noto Sans Arabic" },
+        { "value": "Cairo", "label": "Cairo" },
+        { "value": "Tajawal", "label": "Tajawal" }
+      ],
+      "default": "Noto Sans Arabic"
+    },
+    "show_trust_bar": {
+      "type": "boolean",
+      "label": "Show Trust Bar",
+      "default": true
+    },
+    "show_back_to_top": {
+      "type": "boolean",
+      "label": "Show Back to Top Button",
+      "default": true
+    }
+  },
+  "features": [
+    "slider",
+    "banner",
+    "fixed_banner",
+    "products_slider",
+    "featured_products",
+    "latest_products",
+    "categories",
+    "testimonials",
+    "photos_slider",
+    "store_features",
+    "brands",
+    "square_photos",
+    "fixed_products"
+  ],
+  "components": [
+    {
+      "key": "hero_section",
+      "title": "Hero Section",
+      "icon": "fa fa-star",
+      "path": "components/hero.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Main Title",
+          "default": "جمعية مناهل العلم"
+        },
+        {
+          "name": "subtitle",
+          "type": "textarea",
+          "label": "Subtitle",
+          "default": "نبني الأجيال على العلم والإيمان"
+        },
+        {
+          "name": "description",
+          "type": "textarea",
+          "label": "Description",
+          "default": "جمعية خيرية متخصصة في تعليم القرآن الكريم وعلومه، نخدم آلاف الطلاب حول العالم"
+        },
+        {
+          "name": "primary_button_text",
+          "type": "text",
+          "label": "Primary Button Text",
+          "default": "تبرع الآن"
+        },
+        {
+          "name": "primary_button_link",
+          "type": "text",
+          "label": "Primary Button Link",
+          "default": "/donate"
+        },
+        {
+          "name": "secondary_button_text",
+          "type": "text",
+          "label": "Secondary Button Text",
+          "default": "اكتشف برامجنا"
+        },
+        {
+          "name": "secondary_button_link",
+          "type": "text",
+          "label": "Secondary Button Link",
+          "default": "/programs"
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Hero Image",
+          "default": ""
+        },
+        {
+          "name": "background_style",
+          "type": "select",
+          "label": "Background Style",
+          "options": [
+            { "value": "gradient", "label": "Gradient" },
+            { "value": "solid", "label": "Solid Color" },
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "gradient"
+        }
+      ]
+    },
+    {
+      "key": "stats_section",
+      "title": "Impact Stats",
+      "icon": "fa fa-chart-bar",
+      "path": "components/stats.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "أثرنا في الأمة"
+        },
+        {
+          "name": "stat_1_number",
+          "type": "text",
+          "label": "Stat 1 Number",
+          "default": "8633"
+        },
+        {
+          "name": "stat_1_label",
+          "type": "text",
+          "label": "Stat 1 Label",
+          "default": "مستفيد"
+        },
+        {
+          "name": "stat_1_icon",
+          "type": "text",
+          "label": "Stat 1 Icon (Font Awesome class)",
+          "default": "fa fa-users"
+        },
+        {
+          "name": "stat_2_number",
+          "type": "text",
+          "label": "Stat 2 Number",
+          "default": "112"
+        },
+        {
+          "name": "stat_2_label",
+          "type": "text",
+          "label": "Stat 2 Label",
+          "default": "دولة"
+        },
+        {
+          "name": "stat_2_icon",
+          "type": "text",
+          "label": "Stat 2 Icon",
+          "default": "fa fa-globe"
+        },
+        {
+          "name": "stat_3_number",
+          "type": "text",
+          "label": "Stat 3 Number",
+          "default": "26"
+        },
+        {
+          "name": "stat_3_label",
+          "type": "text",
+          "label": "Stat 3 Label",
+          "default": "مقرر"
+        },
+        {
+          "name": "stat_3_icon",
+          "type": "text",
+          "label": "Stat 3 Icon",
+          "default": "fa fa-book"
+        },
+        {
+          "name": "stat_4_number",
+          "type": "text",
+          "label": "Stat 4 Number",
+          "default": "15"
+        },
+        {
+          "name": "stat_4_label",
+          "type": "text",
+          "label": "Stat 4 Label",
+          "default": "عام من العطاء"
+        },
+        {
+          "name": "stat_4_icon",
+          "type": "text",
+          "label": "Stat 4 Icon",
+          "default": "fa fa-calendar"
+        }
+      ]
+    },
+    {
+      "key": "content_section",
+      "title": "Content Section (Image + Text)",
+      "icon": "fa fa-align-right",
+      "path": "components/content-section.twig",
+      "fields": [
+        {
+          "name": "layout",
+          "type": "select",
+          "label": "Layout",
+          "options": [
+            { "value": "image-left", "label": "Image Left - Text Right" },
+            { "value": "image-right", "label": "Image Right - Text Left" }
+          ],
+          "default": "image-right"
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "عنوان القسم"
+        },
+        {
+          "name": "subtitle",
+          "type": "text",
+          "label": "Subtitle",
+          "default": ""
+        },
+        {
+          "name": "content",
+          "type": "richtext",
+          "label": "Content Text",
+          "default": "<p>محتوى النص هنا...</p>"
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Section Image",
+          "default": ""
+        },
+        {
+          "name": "button_text",
+          "type": "text",
+          "label": "Button Text (optional)",
+          "default": ""
+        },
+        {
+          "name": "button_link",
+          "type": "text",
+          "label": "Button Link",
+          "default": ""
+        },
+        {
+          "name": "background",
+          "type": "select",
+          "label": "Background",
+          "options": [
+            { "value": "white", "label": "White" },
+            { "value": "light", "label": "Light Gray" },
+            { "value": "primary", "label": "Primary (Teal)" },
+            { "value": "gradient", "label": "Gradient" }
+          ],
+          "default": "white"
+        }
+      ]
+    },
+    {
+      "key": "programs_section",
+      "title": "Featured Programs",
+      "icon": "fa fa-graduation-cap",
+      "path": "components/programs.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "برامجنا التعليمية"
+        },
+        {
+          "name": "subtitle",
+          "type": "text",
+          "label": "Subtitle",
+          "default": "اختر البرنامج المناسب لك"
+        },
+        {
+          "name": "programs",
+          "type": "repeater",
+          "label": "Programs",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Program Name"
+            },
+            {
+              "name": "description",
+              "type": "textarea",
+              "label": "Short Description"
+            },
+            {
+              "name": "image",
+              "type": "image",
+              "label": "Program Image"
+            },
+            {
+              "name": "price",
+              "type": "text",
+              "label": "Price (or 'مجاني')"
+            },
+            {
+              "name": "link",
+              "type": "text",
+              "label": "Program Link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "donation_tiers",
+      "title": "Donation Tiers",
+      "icon": "fa fa-heart",
+      "path": "components/donation-tiers.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "ساهم معنا"
+        },
+        {
+          "name": "subtitle",
+          "type": "text",
+          "label": "Subtitle",
+          "default": "اختر نوع التبرع"
+        },
+        {
+          "name": "description",
+          "type": "textarea",
+          "label": "Description",
+          "default": "تبرعك يصل مباشرة لطلاب العلم حول العالم"
+        },
+        {
+          "name": "tiers",
+          "type": "repeater",
+          "label": "Donation Tiers",
+          "fields": [
+            {
+              "name": "title",
+              "type": "text",
+              "label": "Tier Title"
+            },
+            {
+              "name": "description",
+              "type": "textarea",
+              "label": "Description"
+            },
+            {
+              "name": "amount",
+              "type": "text",
+              "label": "Amount (e.g. 100 ريال)"
+            },
+            {
+              "name": "button_text",
+              "type": "text",
+              "label": "Button Text",
+              "default": "تبرع الآن"
+            },
+            {
+              "name": "link",
+              "type": "text",
+              "label": "Donation Link"
+            },
+            {
+              "name": "highlighted",
+              "type": "boolean",
+              "label": "Highlight this tier?",
+              "default": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "testimonials_section",
+      "title": "Testimonials",
+      "icon": "fa fa-quote-right",
+      "path": "components/testimonials.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "قالوا عنا"
+        },
+        {
+          "name": "testimonials",
+          "type": "repeater",
+          "label": "Testimonials",
+          "fields": [
+            {
+              "name": "quote",
+              "type": "textarea",
+              "label": "Quote Text"
+            },
+            {
+              "name": "author",
+              "type": "text",
+              "label": "Author Name"
+            },
+            {
+              "name": "role",
+              "type": "text",
+              "label": "Role (e.g. طالب تفسير)"
+            },
+            {
+              "name": "image",
+              "type": "image",
+              "label": "Author Photo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "trust_section",
+      "title": "Trust & Compliance",
+      "icon": "fa fa-shield-alt",
+      "path": "components/trust.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Section Title",
+          "default": "متجر آمن وموثوق"
+        },
+        {
+          "name": "show_zatca",
+          "type": "boolean",
+          "label": "Show ZATCA Badge",
+          "default": true
+        },
+        {
+          "name": "show_secure_payment",
+          "type": "boolean",
+          "label": "Show Secure Payment Badge",
+          "default": true
+        },
+        {
+          "name": "show_charity_license",
+          "type": "boolean",
+          "label": "Show Charity License",
+          "default": true
+        },
+        {
+          "name": "show_transparency",
+          "type": "boolean",
+          "label": "Show Transparency Badge",
+          "default": true
+        }
+      ]
+    },
+    {
+      "key": "cta_section",
+      "title": "Call to Action Banner",
+      "icon": "fa fa-bullhorn",
+      "path": "components/cta.twig",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Title",
+          "default": "كن جزءاً من الأثر"
+        },
+        {
+          "name": "description",
+          "type": "textarea",
+          "label": "Description",
+          "default": "انضم لآلاف المتبرعين الذين يبنون مستقبل الأمة"
+        },
+        {
+          "name": "button_text",
+          "type": "text",
+          "label": "Button Text",
+          "default": "ابدأ تبرعك الآن"
+        },
+        {
+          "name": "button_link",
+          "type": "text",
+          "label": "Button Link",
+          "default": "/donate"
+        },
+        {
+          "name": "background",
+          "type": "select",
+          "label": "Background Style",
+          "options": [
+            { "value": "gradient", "label": "Teal Gradient" },
+            { "value": "accent", "label": "Gold Gradient" },
+            { "value": "dark", "label": "Dark" }
+          ],
+          "default": "gradient"
+        }
+      ]
+    }
+  ]
+}

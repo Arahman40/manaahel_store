@@ -1,0 +1,23 @@
+{
+  "name": "manaahel-theme",
+  "version": "1.0.0",
+  "description": "Manaahel Islamic Charity - Premium Custom Theme",
+  "author": "Abo Zyad",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "salla theme preview",
+    "build": "salla theme build",
+    "watch": "salla theme preview --watch"
+  },
+  "devDependencies": {
+    "@salla.sa/twilight": "latest",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "postcss-import": "^16.0.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.0"
+  }
+}
